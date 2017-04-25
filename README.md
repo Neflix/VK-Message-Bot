@@ -1,4 +1,6 @@
 VK Message Bot
 ==============
 
-The basic functionality for the VK message bot.
+Basic functions to create a VK bot message.
+
+----------
