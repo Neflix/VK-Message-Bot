@@ -106,11 +106,13 @@ namespace
 	}
 	
 	foreach(Loader::PHP_EXTENSIONS as $extension)
+	{
 		if(!extension_loaded($extension))
 		{
 			$error = true;
 			Logger::error("Не установлено расширение: &e".$extension.".");
 		}
+	}
 	
 	if($error)
 	{
