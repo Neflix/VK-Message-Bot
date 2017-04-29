@@ -1,6 +1,6 @@
-VK Message Bot
+VK Message Bot API
 ==============
 
-Basic functions to create a [VK.com](http://vk.com/) bot message.
+Основной функционал для создания бота на [VK.com](http://vk.com/).
 
 ----------
