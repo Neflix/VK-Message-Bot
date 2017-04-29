@@ -1,5 +1,5 @@
 <?php
-namespace base\utils\server;
+namespace bot\utils\server;
 
 #
 #           • - - - - - - - - - - - - - - - - - - - - - • - - - - - - - - - - - - - - - - - •

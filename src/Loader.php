@@ -18,13 +18,13 @@ namespace
 {
 	use spl\ClassLoader;
 	
-	use base\Core;
+	use bot\Core;
 	
-	use base\console\Logger;
-	use base\console\Terminal;
+	use bot\console\Logger;
+	use bot\console\Terminal;
 	
-	use base\utils\ExceptionHandler;
-	use base\utils\server\ServerUtils;
+	use bot\utils\ExceptionHandler;
+	use bot\utils\server\ServerUtils;
 	
 	interface Loader
 	{

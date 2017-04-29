@@ -1,5 +1,5 @@
 <?php
-namespace base\utils\date;
+namespace bot\utils\date;
 
 #
 #           • - - - - - - - - - - - - - - - - - - - - - - - - - - - • - - - - - - - - - - - - - - - - - - - - - •
@@ -17,8 +17,6 @@ namespace base\utils\date;
 #           @author MinePlus
 #           @website http://www.MinePlus.ru/
 #
-
-use server\utils\text\TextUtils;
 
 abstract class DateUtils
 {

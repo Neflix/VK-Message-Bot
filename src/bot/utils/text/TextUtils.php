@@ -1,5 +1,5 @@
 <?php
-namespace base\utils;
+namespace bot\utils\text;
 
 #
 #           • - - - - - - - - - - - - - - - - - - - - - • - - - - - - - - - - - - - - - - - •
@@ -15,38 +15,31 @@ namespace base\utils;
 #           @link https://github.com/Neflix/
 #
 
-use base\console\Logger;
-
-use base\utils\file\FileUtils;
-
-use base\utils\text\TextUtils;
-use base\utils\text\TextFormat;
-
-abstract class ExceptionHandler
+abstract class TextUtils
 {
 	/**
-	 *  Обработка непойманного исключения.
+	 *  Возвращает текст с переносами.
 	 *
-	 *  @param \Throwable $exception
+	 *  @param string ...$text
+	 *
+	 *  @return string
 	 */
-	static function handle (\Throwable $exception)
+	static function wrapping (string ...$text) : string
 	{
-		$error_message = $exception->getMessage();
-		$error_code = $exception->getCode();
-		$error_file = $exception->getFile();
-		$error_line = $exception->getLine();
-		
-		$message =
-		[
-			"Необработанное исключение:",
-			"",
-			"&l&cСообщение &r&b> &f".$error_message,
-			"&l&cКод ошибки &r&b> &f".$error_code.".",
-			"&l&cФайл &r&b> &f".FileUtils::getCleanedPath($error_file).".",
-			"&l&cСтрока &r&b> &f".$error_line.".",
-			"",
-		];
-		
-		Logger::error(TextUtils::wrapping(...$message));
+		return implode(PHP_EOL, $text);
+	}
+	
+	/**
+	 *  Возвращает замененную строку.
+	 *  Меняет в тексте все ключи массива на их значение.
+	 *
+	 *  @param string $str
+	 *  @param array  $words
+	 *
+	 *  @return string
+	 */
+	static function replace (string $str, array $words) : string
+	{
+		return str_replace(array_keys($words), array_values($words), $str);
 	}
 }

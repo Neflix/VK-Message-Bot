@@ -1,5 +1,5 @@
 <?php
-namespace base\utils\text;
+namespace bot\utils\text;
 
 #
 #           • - - - - - - - - - - - - - - - - - - - - - • - - - - - - - - - - - - - - - - - •
@@ -15,7 +15,7 @@ namespace base\utils\text;
 #           @link https://github.com/Neflix/
 #
 
-use base\console\Terminal;
+use bot\console\Terminal;
 
 abstract class TextFormat
 {

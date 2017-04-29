@@ -1,5 +1,5 @@
 <?php
-namespace base\console;
+namespace bot\console;
 
 #
 #           • - - - - - - - - - - - - - - - - - - - - - • - - - - - - - - - - - - - - - - - •
@@ -15,7 +15,7 @@ namespace base\console;
 #           @link https://github.com/Neflix/
 #
 
-use base\utils\server\ServerUtils;
+use bot\utils\server\ServerUtils;
 
 abstract class Terminal
 {
